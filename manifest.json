@@ -1,0 +1,10 @@
+{
+  "name": "Heatwave Help Bot - Tucson",
+  "short_name": "HeatHelp",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fef6ec",
+  "theme_color": "#e25d2a",
+  "description": "AI-powered safety app for Tucson heatwaves",
+  "icons": []
+}
