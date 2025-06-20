@@ -1,4 +1,4 @@
-const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace this
+const API_KEY = cc5abb5d6ab4c4ab84d1cd14abb43c38'; // Replace this
 const tucsonCoords = { lat: 32.2226, lon: -110.9747 };
 
 async function getWeather() {
