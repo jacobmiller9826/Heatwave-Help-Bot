@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heatwave Help Bot - Tucson</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#e25d2a" />
+  <script src="chat.js" defer></script>
+  <script src="weather.js" defer></script>
+  <script src="lang.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 id="title">🔥 Heatwave Help Bot</h1>
+    <p id="subtitle">Stay safe during Tucson’s extreme heat.</p>
+    <div id="risk-level">Checking heat index...</div>
+  </header>
+
+  <main class="container">
+    <section class="chat-section">
+      <div id="chat-box">
+        <div class="message bot" data-lang="intro">☀️ Hi! I'm here to help you stay cool and safe. Ask me anything about heat safety in Tucson.</div>
+      </div>
+      <div class="input-row">
+        <input type="text" id="user-input" placeholder="Ask me something..." autofocus />
+        <button onclick="sendMessage()">➤</button>
+      </div>
+    </section>
+
+    <section class="resources">
+      <h2 data-lang="quickTips">Quick Tips</h2>
+      <ul>
+        <li>💧 Drink water every 15 minutes</li>
+        <li>🕶️ Avoid sun 10am–4pm</li>
+        <li>🌳 Rest in shade</li>
+        <li>🏥 Know heatstroke signs</li>
+      </ul>
+
+      <h2 data-lang="centers">Cooling Centers</h2>
+      <a href="https://tucsonaz.gov" target="_blank" data-lang="viewMap">View Map of Tucson Cooling Centers</a>
+
+      <button onclick="panicHelp()" class="emergency-btn" data-lang="panicBtn">🚨 Emergency? What to Do</button>
+      <a href="tel:5207914144" class="aid-link" data-lang="aidLink">📞 Request City Water Help</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ for Tucson | <button onclick="toggleLang()">🌐 Switch Language</button></p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('Service worker registered.'))
+        .catch(err => console.error('Service worker failed:', err));
+    }
+  </script>
+</body>
+</html>
